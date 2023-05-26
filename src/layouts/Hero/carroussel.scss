@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+.carroussel-container{
+    
+    height: 100%;
+    overflow-x: hidden;
+
+    
+    .slide{
+        transform: translateX(-50%) !important;
+    }
+    .carroussel{
+         @include flex;
+        height: 100%;
+        width: 200vw;
+        overflow-x: hidden;
+        transform: translateX(0%);
+        transition: 0.6s ease-out;
+        
+
+        > div{
+            height: 100%;
+            width: 100%;
+            background-color: hsla(0, 0, 15%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode:overlay;
+
+        }
+
+        .carroussel1{
+            
+            background-image: url(../../../public/img/hero1.jpg);
+            background-position-y:40%;
+            
+        }
+    
+        .carroussel2{
+            background-image: url(../../../public/img/hero2.jpg);
+            
+        }
+    }
+
+  
+}

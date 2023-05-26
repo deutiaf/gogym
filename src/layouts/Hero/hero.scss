@@ -1,0 +1,242 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+header{
+    height: 100dvh;
+    .hero-wrapper{
+        @include position(absolute);
+        overflow: hidden;
+
+    }
+
+
+
+    .description{
+        padding: 5rem 5rem 0rem;
+        text-align: center;
+        height: 80%;
+
+        h1{
+            margin-top: 8rem;
+            font-style: italic;
+            
+        }
+        p{
+            color: white;
+            padding: 0 15rem;
+            font-weight: 200;
+            line-height: 2rem;
+            font-size: 1.2rem;
+            font-family: $primary-font;
+        }
+
+        .join{
+            font-size: 2rem;
+            text-decoration: none;
+            display: block;
+            border: 2px solid $text-color-theme1;
+            width: fit-content;
+            margin: auto;
+            margin-top: 5rem;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: 0.3s; 
+            border-radius: 1rem;
+
+            &:hover{
+                
+                background-color:$background-color-theme1;
+            }
+        }
+    }
+    
+}
+
+nav{
+    @include flex($justify-content:space-between) ;
+    width: 100%;  
+    padding: 1rem 2rem;
+
+    .logo-hero{
+        font-size: 2rem;
+    }
+
+    .menu-mobile{
+        display: none;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+}
+
+.menu-list{
+    @include list;
+    gap: 1rem;
+    padding: 0;
+}
+.logo-hero{
+    font-family: $logo-font;
+    color: $text-color-theme1;
+}
+
+
+
+//icon
+
+
+.material-symbols-rounded {
+    @include position;
+    font-size: 3rem;
+    color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.close{
+    color: $text-color-theme1;
+
+}
+
+.hide-menu-toggle{
+    display: none;
+}
+
+.menu-slide{
+    transform: translate(0%) !important;
+    -webkit-transform: translate(0%); /* Safari, Chrome, Opera */
+-moz-transform: translate(0%); /* Firefox */
+-ms-transform: translate(0%); /* Internet Explorer */
+-o-transform: translate(0%);
+    position: fixed !important;
+        
+}
+
+
+
+
+
+
+
+    /* +++++++++++++++++++ BREAKPOINTS +++++++++++++++ */
+/* ++++++++++++++++++++ RESPONSIVE TYPOGRAPHY +++++++++++++++++++++ */
+
+@media screen and (max-width: 1400px) {
+    
+    header{
+
+        .description{
+           
+            h1{
+                margin-top: 4rem;
+            }
+
+            p{
+                padding: 0 6rem;
+            }
+        }
+    } 
+   }
+  
+  @media screen and (max-width: 992px) {
+    
+   header{
+
+        .description{
+           
+            h1{
+                margin-top: 8rem;
+            }
+
+            p{
+                padding: 0;
+            }
+        }
+
+        .menu-list{
+            gap: 0;
+        }
+    } 
+   
+
+
+   }
+
+  
+     /* ++++++++++++++++ FOR LARGE TABLETTE +++++++++++++ */
+     
+     
+     @media screen and (max-width: 768px) {
+        
+        nav{
+
+            .menu{
+                display: none;
+            }
+            .menu-toggle{
+                display:block
+            }
+        } 
+
+       nav .menu-mobile{
+            @include position(absolute);
+            @include list;
+            display: block;
+            background-color: $background-color-black1;
+            transform: translate(100%);
+            -webkit-transform: translate(100%); /* Safari, Chrome, Opera */
+            -moz-transform: translate(100%); /* Firefox */
+            -ms-transform: translate(100%); /* Internet Explorer */
+            -o-transform: translate(100%);
+
+            ul{
+                text-align: center;
+                height: 100%;
+                padding: 0;
+
+                @include flex($flex-direction:column);
+
+                
+                li{
+                    margin: 1.5rem;
+                    a{
+                        font-size: 1.4rem;
+        
+                    }
+                }
+            }
+        }
+     }
+
+
+     /* +++++++++++++++++++ FOR MEDIUM DEVICES +++++++++++++++++++++++++++ */
+  
+     @media screen and (max-width: 576px) {
+    
+        .description{
+            padding: 1rem 1rem !important;
+
+            h1{
+                font-size: 2.5rem;
+                margin-top: 5rem !important;
+            }
+
+            .join{
+                margin-top: 2rem !important;
+            }
+        }
+      
+     }
+     /* +++++++++++++++++++++ FOR SMALL DEVICES++++++++++++++++++++++++ */
+  
+     @media screen and (max-width: 375px) {
+     
+     }

@@ -1,0 +1,228 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use 'sass:color';
+
+footer{
+    background-color: $background-color-black1;
+    background-image: url(../../../public/img/footer.jpg);
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    color: $text-color-gray2 ;
+    padding: 3rem;
+    .news-letter{
+        padding: 4rem 1rem;
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+
+        input{
+            height: 3rem;
+            padding: 0.5rem;
+            border: none;
+            outline: none;
+            margin: 0.1rem;
+            border-radius: 5px;
+            width: 20rem;
+        }
+
+        button{
+            
+                height: 3rem;
+                padding: 0.5rem;
+                border: none;
+                outline: none;
+                margin: 0.2rem;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: $background-color-theme1;
+                
+                color: $text-color-gray3;
+                &:hover{
+                    background-color: color.adjust($color:$background-color-theme1,$lightness:-10%);
+                }
+        }
+        h3{
+            font-size: 3rem
+            
+        }
+    }
+
+    .footer-description{
+        @include flex(space-between,flex-start);
+        h4{
+            font-size: 1.4rem;
+            
+        }
+
+    .location{
+        a{
+            font-size: 1rem;
+            color: $text-color-gray2;
+            @include hover($text-color-theme1)
+        }
+    } 
+     .menu-footer{
+        
+
+        ul{
+            flex-direction: column;
+            align-items: flex-start;
+
+            li{
+                margin: 0;
+
+                a{
+                    font-weight: normal;
+                    color: $text-color-gray2;
+                    font-size: 1rem;
+                    @include hover($background-color-theme1)
+                }
+                
+            }
+            
+        }
+    }
+    .social{
+        .bx{
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        .bxl-facebook-circle{
+            @include hover(hsl(208, 75%, 52%))
+        }
+
+        .bxl-instagram{
+           @include hover(hsl(5, 80%, 50%))
+        }
+
+        .bxl-snapchat{
+            @include hover(hsl(50, 100%, 52%))
+        }
+
+        .bxl-twitter{
+            @include hover(hsl(203, 89%, 53%))
+        }
+
+    }
+
+    .download{
+        .app-features{
+            ul{
+                padding-left: 0rem;
+                list-style: none;
+                font-style: italic;
+                font-size: 0.8rem;
+                
+                li{
+                    margin-top: 0.4rem;
+                }
+                
+            }
+        }
+        .appstore{
+            h4{
+                font-size: 1.2rem;
+                font-family: $secondary-font;
+                color: $text-color-theme3;
+
+            }
+            .stores{
+                img{
+                    margin: 0 0.3rem;
+                    max-width: auto;
+                    height: 3rem;
+                    
+                    
+                }
+            }
+        }
+    }
+
+    
+    }
+
+    .copyright{
+        font-size: 1rem;
+        font-style: italic;
+        margin-top: 3rem;
+    }
+    
+}
+
+
+
+
+    /* +++++++++++++++++++ BREAKPOINTS +++++++++++++++ */
+/* ++++++++++++++++++++ RESPONSIVE TYPOGRAPHY +++++++++++++++++++++ */
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    footer{
+        width: 100%;
+        .footer-description{
+            width: 100%;
+            gap: 1.5rem;
+
+            .social{
+                flex: 1 0 auto;
+            }
+        }
+    }
+}
+
+
+  /* ++++++++++++++++ FOR LARGE TABLETTE +++++++++++++ */
+  
+  
+  @media screen and (max-width: 768px) {
+     
+   
+  }
+
+
+  /* +++++++++++++++++++ FOR MEDIUM DEVICES +++++++++++++++++++++++++++ */
+
+  @media screen and (max-width: 576px) {
+    footer{
+        text-align: center;
+        
+        .news-letter{
+            padding:0;
+        }
+        .footer-description{
+            flex-direction: column;
+            align-items: center;
+
+            .menu-list{
+                align-items: center !important;
+
+
+            }
+
+        }
+    }
+ 
+   
+  }
+  /* +++++++++++++++++++++ FOR SMALL DEVICES++++++++++++++++++++++++ */
+
+  @media screen and (max-width: 375px) {
+   
+   footer{
+    padding:3rem 1rem;
+    
+    .news-letter{
+        input{
+            width: 15rem  ;
+        }
+    }
+   }
+   
+  }

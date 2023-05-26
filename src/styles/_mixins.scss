@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+
+@mixin list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li{
+        list-style: none;
+        margin: 0rem 0.7rem;
+
+        a{
+            text-decoration: none;
+            color: white;
+
+            &:hover{
+                color: $text-color-theme2;
+            }
+        }
+    }
+
+}
+
+@mixin flex($justify-content:center,$align-items:center,$flex-direction:row){
+    display:flex;
+    justify-content:$justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+
+}
+
+@mixin position($position:relative,$top:0,$right:0,$bottom:0,$left:0){
+    position: $position;
+    top:$top;
+    right:$right;
+    bottom: $bottom;
+    left:$left;
+}
+
+
+//hover 
+@mixin hover($color){
+    
+        &:hover{
+            color:$color;
+        }
+    
+}

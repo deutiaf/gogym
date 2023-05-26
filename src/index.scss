@@ -1,0 +1,79 @@
+@use './styles/mixins' as *;
+@use './styles/variables' as *;
+
+
+html,
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: $primary-font;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: $title-font;
+    color:$text-color-theme1;
+    margin: 1rem 0;
+}
+h1{
+    font-size: 4rem;
+}
+
+a{
+    font-size: 1.2rem;
+    font-family: $primary-font;
+    color:$text-color-gray3;
+    
+}
+
+.Layout{
+    width:100vw
+}
+
+
+
+    /* +++++++++++++++++++ BREAKPOINTS +++++++++++++++ */
+/* ++++++++++++++++++++ RESPONSIVE TYPOGRAPHY +++++++++++++++++++++ */
+
+@media screen and (max-width: 1400px) {
+    
+   }
+  
+  @media screen and (max-width: 992px) {
+  
+   }
+
+  
+     /* ++++++++++++++++ FOR LARGE TABLETTE +++++++++++++ */
+     
+     
+     @media screen and (max-width: 768px) {
+       
+
+      
+     }
+
+
+     /* +++++++++++++++++++ FOR MEDIUM DEVICES +++++++++++++++++++++++++++ */
+  
+     @media screen and (max-width: 576px) {
+    
+      
+     }
+     /* +++++++++++++++++++++ FOR SMALL DEVICES++++++++++++++++++++++++ */
+  
+     @media screen and (max-width: 375px) {
+      
+       html{
+        font-size: 14px;
+       }
+     }

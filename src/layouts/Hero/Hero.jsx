@@ -3,8 +3,7 @@ import { NavLink,Link } from 'react-router-dom'
 import './hero.scss'
 import Carroussel from './Carroussel'
 
-const Hero = () => {
-
+const Hero = ({data}) => {
     const [active, setActive] = useState(false)
     useEffect(() => {
       if(active){
@@ -16,31 +15,32 @@ const Hero = () => {
     
      
     }, [active])
+
     
     return (
    
         <header>
-            <Carroussel/>
+            <Carroussel img={data}/>
             <div className="hero-wrapper">
                 <nav>
                     <div className='logo-hero'>GoGym</div>
                     <div className={`menu-mobile ${active?'menu-slide': ''}`}>
                     <ul className='menu-list-mobile'>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Home</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Fitness Programs</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Timetable</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Price</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Contact</NavLink></li>
+                            <li className="menu-item" onClick={()=>{setActive(false)}} ><NavLink to="/" className="menu-link">Home</NavLink></li>
+                            <li className="menu-item" onClick={()=>{setActive(false)}}><NavLink to="/programs" className="menu-link">Fitness Programs</NavLink></li>
+                            <li className="menu-item" onClick={()=>{setActive(false)}}><NavLink to="/timetable" className="menu-link">Timetable</NavLink></li>
+                            <li className="menu-item" onClick={()=>{setActive(false)}}><NavLink to="/pricing" className="menu-link">Pricing</NavLink></li>
+                            <li className="menu-item" onClick={()=>{setActive(false)}}><NavLink to="/contact" className="menu-link">Contact</NavLink></li>
 
                         </ul>
                     </div>
                     <div className='menu'>
                         <ul className='menu-list'>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Home</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Fitness-Programs</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Timetable</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Price</NavLink></li>
-                            <li className="menu-item"><NavLink to="#" className="menu-link">Contact</NavLink></li>
+                            <li className="menu-item"><NavLink to="/" className="menu-link">Home</NavLink></li>
+                            <li className="menu-item"><NavLink to="/Programs" className="menu-link">Fitness-Programs</NavLink></li>
+                            <li className="menu-item"><NavLink to="/timetable" className="menu-link">Timetable</NavLink></li>
+                            <li className="menu-item"><NavLink to="/pricing" className="menu-link">Pricing</NavLink></li>
+                            <li className="menu-item"><NavLink to="/contact" className="menu-link">Contact</NavLink></li>
 
                         </ul>
                     </div>
@@ -51,14 +51,13 @@ const Hero = () => {
                 </nav>
 
                 <div className="description">
-                <h1>Unleash Your Inner Champion</h1>
+                <h1>{data.data.h1}</h1>
                 <p>
-                    Here, you will find inspiration to live an active and healthy lifestyle. Whether you're a seasoned
-                    athlete or a passionate enthusiast, we have everything you need to achieve your goals and push your
-                    limits.
+                    {data.data.text}
                 </p>
 
                 <Link to='#' className='join'>Join Now</Link>
+                <i className='bx bxs-chevrons-down bx-fade-down' style={{color:'#cececece',fontSize:'2rem',marginTop:"1rem",display:`${active?'none':''}`}}  ></i>
             </div>
             </div>
             
@@ -66,5 +65,7 @@ const Hero = () => {
    
   )
 }
+
+
 
 export default Hero

@@ -1,9 +1,15 @@
 import React from 'react'
+import Story from './Story'
+import './home.scss'
 
 const Home = () => {
+
   return (
-    <div className='Home'>Home</div>
+    <main className='home'>
+      <Story/>
+    </main>
   )
 }
+
 
 export default Home

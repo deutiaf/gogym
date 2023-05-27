@@ -3,7 +3,7 @@
 
 
 header{
-    height: 100dvh;
+    height: 100vh;
     .hero-wrapper{
         @include position(absolute);
         overflow: hidden;
@@ -80,6 +80,10 @@ nav{
     @include list;
     gap: 1rem;
     padding: 0;
+
+    .active{
+        color:$text-color-theme1;
+    }
 }
 .logo-hero{
     font-family: $logo-font;
@@ -149,6 +153,13 @@ nav{
   @media screen and (max-width: 992px) {
     
    header{
+        .carroussel1, .carroussel2{
+                        
+            
+                background-position-x:40%;
+                
+            
+        }
 
         .description{
            
@@ -175,6 +186,7 @@ nav{
      
      
      @media screen and (max-width: 768px) {
+        
         
         nav{
 
@@ -223,7 +235,13 @@ nav{
     
         .description{
             padding: 1rem 1rem !important;
-
+            p{
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
+                font-style: italic;
+                padding: 0rem 3rem !important;
+                
+            }
             h1{
                 font-size: 2.5rem;
                 margin-top: 5rem !important;

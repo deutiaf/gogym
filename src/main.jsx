@@ -2,12 +2,17 @@ import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
 import Layout from './layouts/Layout.jsx'
 import Home from './routes/Home/Home.jsx'
+import Timetable from './routes/Timetable/Timetable.jsx'
+
+
+
 import App from './App.jsx'
 import './index.scss'
 import {
   createBrowserRouter,
   RouterProvider
 }from 'react-router-dom'
+import Contact from './routes/Contact/Contact.jsx'
 
 const router= createBrowserRouter([
   {
@@ -16,6 +21,14 @@ const router= createBrowserRouter([
       {
         path:'/',
         element:<Home/>
+      },
+      {
+        path:'/contact',
+        element:<Contact/>
+      },
+      {
+        path:'/timetable',
+        element:<Timetable/>
       }
     ]
   }

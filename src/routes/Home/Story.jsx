@@ -1,9 +1,12 @@
 import React from 'react'
+import story1 from '../../../public/img/story1.jpg'
 
 const Story = () => {
   return (
     <section className='story'>
         <h2> Empowering Lives through Fitness and Beyond</h2>
+        <div className="story-wrapper">
+        <div className="story-left">
         <p> From its humble beginnings, Gogym has undergone a remarkable evolution, 
             ransitioning from a simple gym to a transformative hub of accomplishment.
              Founded by a fitness enthusiast, Gogym was established with a bold vision: to provide
@@ -16,6 +19,15 @@ const Story = () => {
                  of yourself. Join us and be part of this incredible story of evolution, perseverance, 
                  and success at Gogym.
         </p>
+        </div>
+        
+        <div className="story-right">
+            <div className="story-hero">
+                <img src={story1} alt="athlete" />
+            </div>
+        </div>
+        </div>
+      
     </section>
   )
 }

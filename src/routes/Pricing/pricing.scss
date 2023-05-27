@@ -1,0 +1,112 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+.price-component{
+     height: 120rem;
+    .pricing-wrapper{
+        height: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        >div{
+            width: 100%;
+        }
+        
+        
+    }
+    .card4{
+        >div{
+            background-color: rgb(16, 66, 28);
+
+        }
+    }
+    .card5{
+        >div{
+            background-color: rgb(21, 16, 66);
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    /* +++++++++++++++++++ BREAKPOINTS +++++++++++++++ */
+/* ++++++++++++++++++++ RESPONSIVE TYPOGRAPHY +++++++++++++++++++++ */
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+
+
+    .price-component{
+        height: 140rem;
+        .pricing-wrapper{
+            height: 90%;
+            grid-template-columns: 1fr 1fr ;
+     
+        }
+      
+    }
+    
+    
+}
+
+
+  /* ++++++++++++++++ FOR LARGE TABLETTE +++++++++++++ */
+  
+  
+  @media screen and (max-width: 768px) {
+    
+    .price-component{
+        height: 230rem;
+        .pricing-wrapper{
+            height: 90%;
+            grid-template-columns: 1fr ;
+            width: 85%;
+            margin: auto;
+     
+        }
+      
+    }
+   
+  }
+
+
+  /* +++++++++++++++++++ FOR MEDIUM DEVICES +++++++++++++++++++++++++++ */
+
+  @media screen and (max-width: 576px) {
+    .price-component{
+        height: 230rem;
+        .pricing-wrapper{
+            width: 100%;
+            
+     
+        }
+    }
+   
+  }
+  /* +++++++++++++++++++++ FOR SMALL DEVICES++++++++++++++++++++++++ */
+
+  @media screen and (max-width: 375px) {
+
+    .price-component{
+        padding: 4rem 1.5rem;
+        height: 240rem;
+        .pricing-wrapper{
+            width: 100%;
+           
+    }
+    }
+ 
+  }

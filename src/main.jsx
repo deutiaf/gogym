@@ -13,6 +13,7 @@ import {
   RouterProvider
 }from 'react-router-dom'
 import Contact from './routes/Contact/Contact.jsx'
+import Pricing from './routes/Pricing/Pricing.jsx'
 
 const router= createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router= createBrowserRouter([
       {
         path:'/timetable',
         element:<Timetable/>
+      },
+      {
+        path:'/pricing',
+        element:<Pricing/>
       }
     ]
   }

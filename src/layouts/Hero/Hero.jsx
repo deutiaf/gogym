@@ -37,7 +37,7 @@ const Hero = ({data}) => {
                     <div className='menu'>
                         <ul className='menu-list'>
                             <li className="menu-item"><NavLink to="/" className="menu-link">Home</NavLink></li>
-                            <li className="menu-item"><NavLink to="/Programs" className="menu-link">Fitness-Programs</NavLink></li>
+                            <li className="menu-item"><NavLink to="/programs" className="menu-link">Fitness-Programs</NavLink></li>
                             <li className="menu-item"><NavLink to="/timetable" className="menu-link">Timetable</NavLink></li>
                             <li className="menu-item"><NavLink to="/pricing" className="menu-link">Pricing</NavLink></li>
                             <li className="menu-item"><NavLink to="/contact" className="menu-link">Contact</NavLink></li>

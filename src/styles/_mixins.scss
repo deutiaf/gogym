@@ -47,3 +47,20 @@
         }
     
 }
+
+//card
+@mixin card($height:25rem){
+    &::after{
+        content: '';
+        @include position($position:absolute);
+        height: $height;
+        width: $height ;
+        border:3px solid $text-color-theme2;
+        margin: auto;
+        right: -4rem;
+        top:-3rem;
+        z-index: 10;
+        
+                           
+    }
+}

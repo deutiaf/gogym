@@ -2,7 +2,7 @@
 @use '../../styles/mixins' as *;
 @use 'sass:color';
 
-footer{
+.foot{
     background-color: $background-color-black1;
     background-image: url(../../../public/img/footer.jpg);
     background-blend-mode:overlay;
@@ -164,7 +164,7 @@ footer{
 
 @media screen and (max-width: 992px) {
 
-    footer{
+    .foot{
         width: 100%;
         .footer-description{
             width: 100%;
@@ -190,7 +190,7 @@ footer{
   /* +++++++++++++++++++ FOR MEDIUM DEVICES +++++++++++++++++++++++++++ */
 
   @media screen and (max-width: 576px) {
-    footer{
+    .foot{
         text-align: center;
         
         .news-letter{
@@ -215,7 +215,7 @@ footer{
 
   @media screen and (max-width: 375px) {
    
-   footer{
+   .foot{
     padding:3rem 1rem;
     
     .news-letter{

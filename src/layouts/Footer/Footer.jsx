@@ -8,7 +8,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='foot'>
         <div className="news-letter">
             <h3>Newsletter</h3>
             <p>Stay up to date with our latest news and product</p>

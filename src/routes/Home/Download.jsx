@@ -6,7 +6,7 @@ import phone from '../../../public/img/phone.png'
 
 const Download = () => {
   return (
-    <section className="download">
+    <section className="download2">
         <h1>Get Our App</h1>
         <p>Achieve your fitness goals with our innovative mobile app. Get personalized
              workout programs, live training sessions, progress tracking, and more. Download

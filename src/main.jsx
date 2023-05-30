@@ -23,13 +23,14 @@ const router= createBrowserRouter([
         path:'/',
         element:<Home/>
       },
-      {
+      { 
         path:'/contact',
         element:<Contact/>
       },
       {
         path:'/timetable',
-        element:<Timetable/>
+        element:<Timetable/>,
+        
       },
       {
         path:'/pricing',

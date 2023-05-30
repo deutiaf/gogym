@@ -1,0 +1,136 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+@use 'sass:color';
+
+
+.contact {
+    padding: 3rem 0;
+    p{
+        color: white;
+    }
+    background-color: $background-color-theme1;
+    
+    .contact-wrapper{
+        margin: auto;   
+        @include flex;
+        background-color: $background-color-theme1;
+        width: 80%;
+        >div{
+            flex: 1 1 100%;
+
+        }
+        .contact-details{
+            background-image: none;
+            background-color: $background-color-theme1;
+
+        }
+
+        .social{
+            .bx{
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+    
+            .bxl-facebook-circle{
+                @include hover(hsl(208, 75%, 52%))
+            }
+    
+            .bxl-instagram{
+               @include hover(hsl(5, 80%, 50%))
+            }
+    
+            .bxl-snapchat{
+                @include hover(hsl(50, 100%, 52%))
+            }
+    
+            .bxl-twitter{
+                @include hover(hsl(203, 89%, 53%))
+            }
+    
+        }
+    }
+
+    .download2{
+        h1{
+            font-size: 3rem;
+        }
+        background-image: none;
+        background-color: $background-color-gray3;
+        p{
+            color: $text-color-black1;
+            
+        }
+        li{
+            color: $background-color-black1 !important;
+        }
+            
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    /* +++++++++++++++++++ BREAKPOINTS +++++++++++++++ */
+/* ++++++++++++++++++++ RESPONSIVE TYPOGRAPHY +++++++++++++++++++++ */
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+
+  /* ++++++++++++++++ FOR LARGE TABLETTE +++++++++++++ */
+  
+  
+  @media screen and (max-width: 768px) {
+    
+
+    .contact {
+
+        .contact-wrapper{
+            @include flex($flex-direction:column);
+            gap: 2rem;
+            padding: 3rem 0;
+            >div{
+                flex: 0 0 auto;
+    
+            }
+            .contact-details{
+                text-align: center;
+                padding: 0;
+            }
+            #map{
+                width: 100% !important;
+
+            }
+   
+        }
+    
+      
+    }
+    
+    
+    
+   
+  }
+
+
+  /* +++++++++++++++++++ FOR MEDIUM DEVICES +++++++++++++++++++++++++++ */
+
+  @media screen and (max-width: 576px) {
+
+  }
+  /* +++++++++++++++++++++ FOR SMALL DEVICES++++++++++++++++++++++++ */
+
+  @media screen and (max-width: 375px) {
+
+  }
